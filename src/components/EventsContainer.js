@@ -68,6 +68,16 @@ class EventsContainer extends Component {
         )
     }
 
+    deleteEvent = (id) => {
+        axios.delete(`http://localhost:3001/api/v1/events/${id}`)
+        .then(response => {
+          const eventIndex = this.state.events.findIndex(x => x.id === id)
+          const events = update(this.state.events, { $splice: [[eventIndex, 1]]})
+          this.setState({events: events})
+        })
+        .catch(error => console.log(error))
+      }
+
     render() {
         return (
         <div>
@@ -82,7 +92,7 @@ class EventsContainer extends Component {
                     if(this.state.editingEventId === event.id) {
                         return(<EventForm event={event} key={event.id} updateEvent={this.updateEvent} titleRef={input => this.title = input} resetNotification={this.resetNotification} />)
                     } else {
-                        return(<Event event={event} key={event.id} onClick={this.enableEditing} />)
+                        return(<Event event={event} key={event.id} onClick={this.enableEditing} onDelete={this.deleteEvent} />)
                     }
                 })}
             </ul>
