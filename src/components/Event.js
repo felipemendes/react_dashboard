@@ -12,15 +12,21 @@ class Event extends Component {
 
   render () {
     return(
-      <li>
-        <span onClick={this.handleDelete}>X</span>
-        <h4 onClick={this.handleClick}>
-          {this.props.event.title}
-        </h4>
-        <p onClick={this.handleClick}>
-          {this.props.event.body}
-        </p>
-      </li>
+      <tr>
+        <td>
+          <h4 onClick={this.handleClick}>
+            {this.props.event.title}
+          </h4>
+        </td>
+        <td>
+          <p onClick={this.handleClick}>
+            {this.props.event.body}
+          </p>
+        </td>
+        <td>
+          <span onClick={this.handleDelete}>Delete</span>
+        </td>
+      </tr>
     )
   }
 }

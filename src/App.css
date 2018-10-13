@@ -7,3 +7,62 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table td, table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+table tr:nth-child(even){
+  background-color: #f2f2f2;
+}
+
+table tr:hover {
+  background-color: #ddd;
+}
+
+table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #282c34;
+    color: white;
+}
+
+table span {
+  color: red;
+}
+
+button {
+  background: #0035a0;
+  color: white;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 1em;
+}
+
+form {
+  display: flex;
+}
+
+form input,
+form textarea {
+  height: 50px;
+  font-size: 1em;
+  width: 30%;
+}
+
+form input,
+form textarea {
+  width: 30%;
+}
+
+form textarea {
+  width: 60%;
+}

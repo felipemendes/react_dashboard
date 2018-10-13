@@ -87,7 +87,12 @@ class EventsContainer extends Component {
             <span className="notification">
                 {this.state.notification}
             </span>
-            <ul>
+            <table>
+                <tr>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Action</th>
+                </tr>
                 {this.state.events.map((event) => {
                     if(this.state.editingEventId === event.id) {
                         return(<EventForm event={event} key={event.id} updateEvent={this.updateEvent} titleRef={input => this.title = input} resetNotification={this.resetNotification} />)
@@ -95,7 +100,7 @@ class EventsContainer extends Component {
                         return(<Event event={event} key={event.id} onClick={this.enableEditing} onDelete={this.deleteEvent} />)
                     }
                 })}
-            </ul>
+            </table>
         </div>
         );
     }
