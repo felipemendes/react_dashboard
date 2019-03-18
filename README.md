@@ -5,7 +5,7 @@ Experimental dashboard connected to [Rails API](https://github.com/purai/rails_a
 Get via git clone:
 ```
 $ git clone https://github.com/purai/react_dashboard.git
-$ cd purai-react-rails-dashboard
+$ cd react_dashboard
 ```
 
 Get dependencies with [NPM](https://github.com/npm/cli):
