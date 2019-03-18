@@ -1,10 +1,10 @@
 # React PurAí Dashboard
-Experimental dashboard connected to [Rails API](https://github.com/felipemendes/purai-rails-api) project. Implemented list, add, edit and delete events.
+Experimental dashboard connected to [Rails API](https://github.com/purai/rails_api) project. Implemented list, add, edit and delete events.
 
 ## Installation
 Get via git clone:
 ```
-$ git clone https://github.com/felipemendes/purai-react-rails-dashboard.git
+$ git clone https://github.com/purai/react_dashboard.git
 $ cd purai-react-rails-dashboard
 ```
 
